@@ -1,9 +1,13 @@
 {
     "editor.rulers" : [
         {
-            "column": 80,
+            "column": 98,
             "color": "#00aeff7a",
         }
     ],
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.cursorStyle": "block",
+
     "autoDocstring.docstringFormat": "numpy"
 }
