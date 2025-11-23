@@ -6,6 +6,9 @@ sudo apt update
 sudo apt upgrade
 
 
+printf "\n\nInstalling pipx...\n\n"
+sudo apt install pipx
+
 printf "\n\nInstalling neofetch...\n\n"
 sudo apt install neofetch
 
@@ -45,12 +48,9 @@ code --install-extension ms-vscode-remote.vscode-remote-extensionpack  # Remote 
 # Python setup
 printf "\n\nSetting up Python..."
 
-# Install mamba virtual environments manager (https://github.com/conda-forge/miniforge)
-printf "\n\nInstalling mamba...\n\n"
-mamba_script="Miniforge3-$(uname)-$(uname -m).sh"
-wget  "https://github.com/conda-forge/miniforge/releases/latest/download/$mamba_script"
-bash $mamba_script
-rm $mamba_script
+# Install poetry virtual environments manager (https://python-poetry.org/)
+printf "\n\nInstalling poetry...\n\n"
+pipx install poetry
 
 # Python-related vscode extensions
 printf "\nInstalling python-related vscode extensions...\n\n"
